@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="libevent">
+      <UniqueIdentifier>{371d31e7-bf20-444d-aa55-a56e1e1e2c60}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -28,6 +31,99 @@
     </ClCompile>
     <ClCompile Include="libevent-demo.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\buffer.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\buffer_iocp.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\bufferevent.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\bufferevent_async.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\bufferevent_filter.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\bufferevent_pair.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\bufferevent_ratelim.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\bufferevent_sock.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\devpoll.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\epoll.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evdns.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\event.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\event_iocp.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\event_tagging.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evmap.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evport.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evrpc.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evthread.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evthread_win32.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evutil.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evutil_rand.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\evutil_time.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\http.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\kqueue.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\listener.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\log.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\poll.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\select.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\signal.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\strlcpy.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="libevent\src\win32select.c">
+      <Filter>libevent</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
