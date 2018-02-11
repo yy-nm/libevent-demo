@@ -90,7 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>libevent/include/win32;libevent/include/win32/event2;libevent/src;libevent/src/event2;libevent/src/compat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libevent/include/win32;../libevent/include/win32/event2;../libevent/src;../libevent/src/event2;../libevent/src/compat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -101,12 +101,14 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../libevent/include/win32;../libevent/src;../libevent/src/compat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,42 +152,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\libevent\src\evdns.h" />
+    <ClInclude Include="..\libevent\src\event.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\libevent\src\buffer.c" />
+    <ClCompile Include="..\libevent\src\bufferevent.c" />
+    <ClCompile Include="..\libevent\src\bufferevent_async.c" />
+    <ClCompile Include="..\libevent\src\bufferevent_filter.c" />
+    <ClCompile Include="..\libevent\src\bufferevent_pair.c" />
+    <ClCompile Include="..\libevent\src\bufferevent_ratelim.c" />
+    <ClCompile Include="..\libevent\src\bufferevent_sock.c" />
+    <ClCompile Include="..\libevent\src\buffer_iocp.c" />
+    <ClCompile Include="..\libevent\src\devpoll.c" />
+    <ClCompile Include="..\libevent\src\epoll.c" />
+    <ClCompile Include="..\libevent\src\evdns.c" />
+    <ClCompile Include="..\libevent\src\event.c" />
+    <ClCompile Include="..\libevent\src\event_iocp.c" />
+    <ClCompile Include="..\libevent\src\event_tagging.c" />
+    <ClCompile Include="..\libevent\src\evmap.c" />
+    <ClCompile Include="..\libevent\src\evport.c" />
+    <ClCompile Include="..\libevent\src\evrpc.c" />
+    <ClCompile Include="..\libevent\src\evthread.c" />
+    <ClCompile Include="..\libevent\src\evthread_win32.c" />
+    <ClCompile Include="..\libevent\src\evutil.c" />
+    <ClCompile Include="..\libevent\src\evutil_rand.c" />
+    <ClCompile Include="..\libevent\src\evutil_time.c" />
+    <ClCompile Include="..\libevent\src\http.c" />
+    <ClCompile Include="..\libevent\src\kqueue.c" />
+    <ClCompile Include="..\libevent\src\listener.c" />
+    <ClCompile Include="..\libevent\src\log.c" />
+    <ClCompile Include="..\libevent\src\poll.c" />
+    <ClCompile Include="..\libevent\src\select.c" />
+    <ClCompile Include="..\libevent\src\signal.c" />
+    <ClCompile Include="..\libevent\src\strlcpy.c" />
+    <ClCompile Include="..\libevent\src\win32select.c" />
     <ClCompile Include="libevent-demo.cpp" />
-    <ClCompile Include="libevent\src\buffer.c" />
-    <ClCompile Include="libevent\src\bufferevent.c" />
-    <ClCompile Include="libevent\src\bufferevent_async.c" />
-    <ClCompile Include="libevent\src\bufferevent_filter.c" />
-    <ClCompile Include="libevent\src\bufferevent_pair.c" />
-    <ClCompile Include="libevent\src\bufferevent_ratelim.c" />
-    <ClCompile Include="libevent\src\bufferevent_sock.c" />
-    <ClCompile Include="libevent\src\buffer_iocp.c" />
-    <ClCompile Include="libevent\src\devpoll.c" />
-    <ClCompile Include="libevent\src\epoll.c" />
-    <ClCompile Include="libevent\src\evdns.c" />
-    <ClCompile Include="libevent\src\event.c" />
-    <ClCompile Include="libevent\src\event_iocp.c" />
-    <ClCompile Include="libevent\src\event_tagging.c" />
-    <ClCompile Include="libevent\src\evmap.c" />
-    <ClCompile Include="libevent\src\evport.c" />
-    <ClCompile Include="libevent\src\evrpc.c" />
-    <ClCompile Include="libevent\src\evthread.c" />
-    <ClCompile Include="libevent\src\evthread_win32.c" />
-    <ClCompile Include="libevent\src\evutil.c" />
-    <ClCompile Include="libevent\src\evutil_rand.c" />
-    <ClCompile Include="libevent\src\evutil_time.c" />
-    <ClCompile Include="libevent\src\http.c" />
-    <ClCompile Include="libevent\src\kqueue.c" />
-    <ClCompile Include="libevent\src\listener.c" />
-    <ClCompile Include="libevent\src\log.c" />
-    <ClCompile Include="libevent\src\poll.c" />
-    <ClCompile Include="libevent\src\select.c" />
-    <ClCompile Include="libevent\src\signal.c" />
-    <ClCompile Include="libevent\src\strlcpy.c" />
-    <ClCompile Include="libevent\src\win32select.c" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
